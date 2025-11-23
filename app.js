@@ -8,8 +8,6 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const indexRouter = require("./routes/film-library/index");
-const usersRouter = require("./routes/film-library/users");
 const configurationRouter = require("./routes/film-library/configuration");
 const movieRouter = require("./routes/film-library/movie");
 const tvRouter = require("./routes/film-library/tv");
@@ -32,8 +30,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/configuration", configurationRouter);
 app.use("/movie", movieRouter);
 app.use("/tv", tvRouter);
