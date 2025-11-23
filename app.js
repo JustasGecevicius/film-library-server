@@ -30,12 +30,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use("/configuration", configurationRouter);
-app.use("/movie", movieRouter);
-app.use("/tv", tvRouter);
-app.use("/person", personRouter);
-app.use("/search", searchRouter);
-app.use("/youtube", youtubeRouter);
+app.use("film_library/configuration", configurationRouter);
+app.use("film_library/movie", movieRouter);
+app.use("film_library/tv", tvRouter);
+app.use("film_library/person", personRouter);
+app.use("film_library/search", searchRouter);
+app.use("film_library/youtube", youtubeRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
